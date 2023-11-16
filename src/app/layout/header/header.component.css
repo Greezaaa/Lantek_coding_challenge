@@ -1,0 +1,49 @@
+header {
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--primary-dark-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+    
+    @media screen and (max-width: 00px) {
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+        height: 100%;
+        padding: 1rem 0;
+    }
+}
+
+header .title {
+    text-align: right;
+}
+h1 {
+    font-size: 1rem;
+    color: var(--gray2-background)
+}
+h3 {
+    font-size: .6rem;
+    font-style: italic;
+    color: var(--gray2-background)
+}
+
+.title h3 a {
+    color: var(--primary-bright-color);
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+.title h3 a:hover {
+    
+    color: var(--blue1-dark);
+}
+
+img {
+    max-width: 164px;
+}

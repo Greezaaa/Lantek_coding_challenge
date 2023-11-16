@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container--filter_buttons {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.container--filter_buttons>button {
+  width: 10em;
+  position: relative;
+  height: 3rem;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  translate: 0 -.1rem;
+  box-shadow: .1rem .1rem .2rem var(--primary-dark-color);
+  transition: 300ms ease-out;
+}
+
+.container--filter_buttons>button:hover {
+  color: var(--blue1-dark);
+  transition: 300ms ease-out;
+}
+
+.container--filter_buttons>button:active {
+  translate: 0 0rem;
+  color: var(--primary-bright-color);
+  box-shadow: 0 0 0 var(--primary-dark-color);
+  transition: all 300ms ease-out;
+}
+
+
+.content {
+  width: min(1010px, 100%);
+  margin-inline: auto;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 1rem;
+  padding-block: 2rem;
+  justify-content: center;
+}

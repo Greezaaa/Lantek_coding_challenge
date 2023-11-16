@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="container--filter_buttons">
+        <button (click)="filterMachinesByTechnology(2)">2D Machines</button>
+        <button (click)="filterMachinesByTechnology(3)">3D Machines</button>
+        <button (click)="filterMachinesByTechnology()">All Machines</button>
+    </div>
+
+    @if (machines && machines.length > 0) {
+    @defer {
+    <div class="content">
+        @for (machine of machines; track machine.id) {
+        <app-machine [machine]="machine" />
+
+        }
+    </div>
+    } @loading ( minimum 100ms) {
+    <p>Loading....</p>
+    }
+    } @else {
+    <h4>No data available.</h4>
+    <p class="no-response"> Please wait, data will be loaded automatically when the page is loaded.</p>
+    }
+</div>
